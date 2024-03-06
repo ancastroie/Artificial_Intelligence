@@ -1,0 +1,6 @@
+interpretation( 4, [number = 1,seconds = 0], [
+    function(Delta, [0]),
+    function(Lambda, [2]),
+    function(Pi, [3]),
+    function(Theta, [1]),
+    function(f(_,_), [0,1,2,3,2,3,0,1,3,2,1,0,1,0,3,2])]).

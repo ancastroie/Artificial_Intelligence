@@ -1,0 +1,54 @@
+set(arithmetic).
+assign(domain_size,5).
+assign(max_models,-1).
+
+list(distinct).
+	[Blue,Green,Red,White,Yellow].
+	[Brit,Dane,German,Norwegian,Swede].
+	[Beer,Coffee,Milk,Tea,Water].
+	[Blends,BlueMaster,Dunhill,PallMall,Prince].
+	[Birds,Cats,Dogs,Horses,Fish].
+end_of_list.
+
+formulas(utils).
+	right_neighbour(x,y)<->x+1=y.
+	left_neighbour(x,y)<->x=y+1.
+	neighbour(x,y)<->right_neighbour(x,y)|left_neighbour(x,y).
+	middle(x)<->x=2.
+	first(x)<->x=0.
+end_of_list.
+
+formulas(assumptions).
+	Brit=Red.
+	Swede=Dogs.
+	Dane=Tea.
+	left_neighbour(White,Green).
+	Green=Coffee.
+	PallMall=Birds.
+	Yellow=Dunhill.
+	middle(Milk).
+	first(Norwegian).
+	neighbour(Blends,Cats).
+	neighbour(Horses,Dunhill).
+	BlueMaster=Beer.
+	German=Prince.
+	neighbour(Norwegian,Blue).
+	neighbour(Blends,Water).
+end_of_list.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

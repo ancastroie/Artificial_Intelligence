@@ -1,0 +1,26 @@
+set(arithmetic).
+assign(domain_size,4).
+assign(max_models,-1).
+
+formulas(latin_square).
+   all x  all y1 all y2 (f(x, y1) = f(x, y2) -> y1 = y2).
+   all x1 all x2 all y  (f(x1, y) = f(x2, y) -> x1 = x2).
+   all x1 all x2 (f(x1,x1)=f(x2,x2) -> x1=x2).
+   all x1 all y1 all x2 all y2 (f(x1,y1)=f(x2,y2) & x1+y1=3 & x2+y2=3 -> x1=x2 & y1=y2).
+   
+end_of_list.
+
+formulas(greek).
+	f(0,0)=Delta.
+	f(0,1)=Theta.
+	f(0,2)=Lambda.
+	f(0,3)=Pi.
+	f(3,1)=Delta.
+	Delta=0.
+	Theta=1.
+	Lambda=2.
+	Pi=3.
+end_of_list.
+
+
+

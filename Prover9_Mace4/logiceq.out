@@ -1,0 +1,9 @@
+interpretation( 9, [number = 1,seconds = 0], [
+    function(A, [4]),
+    function(B, [6]),
+    function(C, [8]),
+    function(D, [1]),
+    function(E, [3]),
+    function(F, [7]),
+    function(G, [5]),
+    function(H, [2])]).

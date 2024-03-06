@@ -1,0 +1,46 @@
+set(arithmetic).
+assign(domain_size,5).
+assign(max_models,-1).
+
+list(distinct).
+	[Black,Blue,Green,Red,White].
+	[Dustin,Eugene,Hank,Keith,Sean].
+	[BeardTrimmer,GameConsole,Laptop,Smartphone,TV].
+	[D40,D50,D60,D70,D80].
+	[A25,A30,A35,A40,A45].
+	[Apple,Cranberry,Grape,Lemon,Orange].
+end_of_list.
+
+formulas(utils).
+	right_neighbour(x,y)<->x+1=y.                   %y is on the right
+	left_neighbour(x,y)<->x=y+1.                    %y is on left
+	neighbour(x,y)<->right_neighbour(x,y)|left_neighbour(x,y).
+	middle(x)<->x=2.
+	fourth(x)<->x=3.
+	on_left(x,y)<->x<y.        		              %x is on the left of y
+	on_right(x,y)<->x>y.    	                  %x is on the right of y
+end_of_list.
+
+formulas(assumptions).
+	right_neighbour(D70,Orange).
+	Keith=A45.
+	left_neighbour(Red,TV).
+	middle(D50).
+	neighbour(Keith,White).
+	on_left(A35,A25)&on_right(A40,A25).
+	Apple=Smartphone.
+	left_neighbour(BeardTrimmer,A30).
+	Sean=A25.
+	right_neighbour(BeardTrimmer,D40).
+	neighbour(Keith,A35).
+	Eugene=A40.
+	Sean=Black.
+	fourth(D80).
+	Dustin=D60.
+	right_neighbour(Grape,Lemon).
+	Keith=GameConsole.
+	left_neighbour(Blue,D80).
+	Grape=BeardTrimmer.
+	on_right(Black,Keith).
+	neighbour(Smartphone,Black).
+end_of_list.
